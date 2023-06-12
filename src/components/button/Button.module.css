@@ -1,0 +1,12 @@
+.btn {
+	position: absolute;
+	top: 0.5%;
+	left: 88%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s, color 0.1s;
+}
+.btn:hover {
+	transform: scale3d(1.2, 1.2, 0.3);
+}

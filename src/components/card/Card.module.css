@@ -1,0 +1,25 @@
+.containerItem {
+	background-color: #3e50f3b6;
+	border: 2px solid white;
+	padding: 1.75rem;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	transition: 0.5s, color 0.1s;
+	-webkit-transition: 0.5s, color 0.1s;
+	-moz-transition: 0.5s, color 0.1s;
+	cursor: pointer;
+	position: relative;
+}
+.containerItem:hover {
+	transform: translatey(20px);
+	-webkit-transform: translatey(20px);
+	-moz-transform: translatey(20px);
+}
+.h2 {
+	font-size: large;
+	color: rgb(0, 255, 34);
+}
