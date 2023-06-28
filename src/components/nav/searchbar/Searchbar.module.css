@@ -45,3 +45,30 @@ input:focus {
 		rgba(0, 0, 0, 0.07) 0px 16px 16px;
 	color: black;
 }
+.randomButton {
+	padding: 5px 10px;
+	background-color: #004dff;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	animation: randomAnimation 1s infinite;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+@keyframes randomAnimation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.randomButton:hover {
+	animation: none;
+}

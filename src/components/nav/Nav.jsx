@@ -1,7 +1,9 @@
 import SearchBar from './searchbar/SearchBar';
 
-export default function Nav({ addCharacter, searchCharacter }) {
+export default function Nav({ onSearch, setAccess }) {
 	return (
-		<SearchBar addCharacter={addCharacter} searchCharacter={searchCharacter} />
+		<div className="nav">
+			<SearchBar onSearch={onSearch} setAccess={setAccess} />
+		</div>
 	);
 }

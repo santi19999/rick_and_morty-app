@@ -2,6 +2,11 @@
 	font-family: rick_and_morty;
 	src: url(../src/assets/get-schwifty/get_schwifty.ttf);
 }
+body {
+	background: url(https://fondosanimados.com/wp-content/uploads/2023/02/rick-and-morty-throw-the-portal-estatico.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .App {
 	text-align: center;
 	font-family: rick_and_morty;

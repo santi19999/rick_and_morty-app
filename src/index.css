@@ -5,13 +5,10 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	background: url(https://fondosanimados.com/wp-content/uploads/2023/02/rick-and-morty-throw-the-portal-estatico.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 code {

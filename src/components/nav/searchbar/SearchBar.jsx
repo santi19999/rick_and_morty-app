@@ -1,28 +1,13 @@
 import { useState } from 'react';
 import style from './Searchbar.module.css';
-import axios from 'axios';
-export default function SearchBar({ addCharacter, searchCharacter }) {
+import { NavLink } from 'react-router-dom';
+export default function SearchBar({ onSearch, setAccess }) {
 	const [id, setId] = useState('');
 
 	const handleChange = (idPersonaje) => {
 		setId(idPersonaje);
 	};
-	const onSearch = (id) => {
-		if (searchCharacter(id)) {
-			window.alert('¡El personaje seleccionado ya existe');
-			return;
-		}
-		axios(`https://rickandmortyapi.com/api/character/${id}`)
-			.then(({ data }) => {
-				if (data.name) {
-					addCharacter(data);
-				}
-			})
-			.catch((error) => {
-				window.alert(error.message);
-			});
-		setId('');
-	};
+
 	const onRandom = (min, max) => {
 		min = Math.ceil(min);
 		max = Math.floor(max);
@@ -33,8 +18,23 @@ export default function SearchBar({ addCharacter, searchCharacter }) {
 	return (
 		<div className={style.navBar}>
 			<h2>Rick and Morty App</h2>
-			<button onClick={() => onRandom(0, 825)}>Random</button>
+			<div className="pages">
+				<NavLink to={'/about'}>
+					<button>About</button>
+				</NavLink>
+				<NavLink to={'/home'}>
+					<button>Home</button>
+				</NavLink>
+				<button onClick={() => setAccess(false)}>LogOut</button>
+			</div>
 			<div className={style.containerSearch}>
+				<button
+					onClick={() => onRandom(0, 825)}
+					className={style.randomButton}
+					id="random"
+				>
+					Random
+				</button>
 				<input
 					type="search"
 					value={id}

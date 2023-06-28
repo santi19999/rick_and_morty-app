@@ -1,7 +1,10 @@
 .containerItem {
+	opacity: 0;
+	transform: translateY(170px);
+	transition: opacity 0.8s ease, transform 1s ease;
 	background-color: #3e50f3b6;
 	border: 2px solid white;
-	padding: 1.75rem;
+	padding: 0.5em;
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
@@ -21,4 +24,9 @@
 .h2 {
 	font-size: large;
 	color: rgb(0, 255, 34);
+}
+
+.containerItem.animate {
+	opacity: 1;
+	transform: translateY(0);
 }

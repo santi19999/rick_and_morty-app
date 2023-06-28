@@ -1,0 +1,62 @@
+@font-face {
+	font-family: rick_and_morty;
+	src: url(../../assets/get-schwifty/get_schwifty.ttf);
+}
+
+.containerForm {
+	background-color: rgba(0, 0, 0, 0.631);
+	width: 30vw;
+	height: 40vh;
+	box-shadow: 0 0 15px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+label {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	justify-content: flex-start;
+	font-size: x-large;
+	font-weight: 800;
+	font-family: rick_and_morty;
+	color: greenyellow;
+}
+
+input {
+	width: 100%;
+	background-color: rgba(90, 88, 88, 0.64);
+	color: greenyellow;
+	border: 1px solid greenyellow;
+}
+btnForm {
+	width: 50%;
+	padding: 5px;
+	border-radius: 10px;
+	border: none;
+	border-bottom: 4px solid greenyellow;
+	font-family: rick_and_morty;
+	font-size: large;
+	font-weight: 800;
+}
+btnForm:hover {
+	background-color: greenyellow;
+}
+span {
+	color: red;
+	font-weight: 600;
+}
