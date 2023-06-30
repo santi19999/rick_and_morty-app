@@ -25,6 +25,9 @@ export default function SearchBar({ onSearch, setAccess }) {
 				<NavLink to={'/home'}>
 					<button>Home</button>
 				</NavLink>
+				<NavLink to={'/favorites'}>
+					<button>Favorites</button>
+				</NavLink>
 				<button onClick={() => setAccess(false)}>LogOut</button>
 			</div>
 			<div className={style.containerSearch}>

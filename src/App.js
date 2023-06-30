@@ -9,13 +9,15 @@ import Error from './components/error/Error';
 import Form from './components/form/Form';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Favorites from './components/favorite/Favorites';
 
 function App() {
+	//function return int > 2
 	const navigate = useNavigate();
 
-	const EMAIL = 'ssherrera@gmail.com';
+	const EMAIL = '';
 
-	const PASSWORD = '12345678';
+	const PASSWORD = '';
 
 	let path = useLocation().pathname;
 	const [characters, setCharacters] = useState([]);
@@ -53,6 +55,7 @@ function App() {
 		<div className={style.App}>
 			{path !== '/' ? <Nav onSearch={onSearch} setAccess={setAccess} /> : ''}
 			<Routes>
+				<Route path="/favorites" element={<Favorites />} />
 				<Route path="/" element={<Form login={login} />} />
 				<Route
 					path="/home"

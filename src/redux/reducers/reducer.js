@@ -1,25 +1,52 @@
-import { ADD_FAV, REMOVE_FAV } from '../actions/action_Types/type';
+import {
+	ADD_FAV,
+	FILTER_CARDS,
+	ORDER_CARDS,
+	REMOVE_FAV,
+} from '../actions/action_Types/type';
 
 const initialState = {
 	myFavorites: [],
+	allCharacters: [],
 };
 
-function reducer(state = initialState, action) {
-	switch (action.type) {
+function reducer(state = initialState, { type, payload }) {
+	switch (type) {
 		case ADD_FAV: {
 			return {
 				...state,
-				myFavorites: [...state.myFavorites, action.payload],
+				myFavorites: [...state.myFavorites, payload],
+				allCharacters: [...state.allCharacters, payload],
 			};
 		}
 		case REMOVE_FAV: {
+			let copy = state.myFavorites.filter(
+				(character) => parseInt(character.id) != parseInt(payload)
+			);
 			return {
 				...state,
-				myFavorites: state.myFavorites.filter(
-					(item) => item.id != action.payload
-				),
+				myFavorites: copy,
+				allCharacters: copy,
 			};
 		}
+		case FILTER_CARDS:
+			let copy2 = [...state.allCharacters];
+			let filterGender = copy2.filter(
+				(character) => character.gender === payload
+			);
+			return {
+				...state,
+				myFavorites: filterGender,
+			};
+		case ORDER_CARDS:
+			let copy3 = [...state.allCharacters];
+
+			return {
+				...state,
+				myFavorites: copy3.sort((a, b) => {
+					return payload === 'A' ? a.id - b.id : b.id - a.id;
+				}),
+			};
 		default: {
 			return { ...state };
 		}

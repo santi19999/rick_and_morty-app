@@ -21,12 +21,103 @@
 	-webkit-transform: translatey(20px);
 	-moz-transform: translatey(20px);
 }
-.h2 {
-	font-size: large;
-	color: rgb(0, 255, 34);
+.name {
+	color: white;
+}
+.status {
+}
+.species {
+}
+.origin {
+}
+.gender {
 }
 
 .containerItem.animate {
 	opacity: 1;
 	transform: translateY(0);
+}
+.containerButton {
+	order: 1;
+	width: 25px;
+	height: 25px;
+	background-color: aliceblue;
+	position: relative;
+	right: 38%;
+	border-radius: 50px;
+	z-index: -1;
+	border: none;
+	cursor: pointer;
+}
+.buttonFavorite {
+	position: absolute;
+	right: -20%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 1;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.containerButton:hover {
+	background-color: #f05858;
+}
+
+.swing {
+	position: absolute;
+	left: 233px;
+	bottom: 225px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	border-radius: 50px;
+	font-family: 'Belanosima', sans-serif;
+	width: 25px;
+	height: 25px;
+	background: transparent;
+	animation-name: swing;
+	-webkit-animation-name: swing;
+	-moz-animation-name: swing;
+	animation: swing 1.5s infinite;
+	cursor: pointer;
+}
+.swing:hover {
+	background-color: chocolate;
+}
+.swing > span {
+	color: white;
+	cursor: none;
+}
+@keyframes swing {
+	20% {
+		transform: rotate3d(0, 0, 1, 15deg);
+	}
+	40% {
+		transform: rotate3d(0, 0, 1, -10deg);
+	}
+	60% {
+		transform: rotate3d(0, 0, 1, 5deg);
+	}
+	80% {
+		transform: rotate3d(0, 0, 1, -5deg);
+	}
+	to {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+}
+
+.buttonStyle {
+	background-color: transparent;
+	border: none;
+	font-size: 1.4em;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+.buttonStyle:hover {
+	transform: scale(1.3);
 }

@@ -1,0 +1,36 @@
+.app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.containerItem {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(34, 58, 50, 0.644);
+	width: fit-content;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	gap: 10px;
+}
+img {
+	width: 50%;
+	border-radius: 0px 60px 60px !important;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.dataCard {
+	width: 50%;
+	height: 100%;
+	border-left: 3px solid greenyellow;
+}

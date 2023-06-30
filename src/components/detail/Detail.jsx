@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import style from '../card/Card.module.css';
+import style from './Detail.module.css';
 import Imagen from '../imagen/Imagen';
 
 const Detail = () => {
@@ -11,15 +11,17 @@ const Detail = () => {
 
 	const viewCardCharactert = () => {
 		return (
-			<div className={style.containerItem + ' ' + style.animate}>
-				<div className="dataCard">
-					<h2 className={style.h2}> {character.name}</h2>
-					<h2 className={style.h2}> {character.status}</h2>
-					<h2 className={style.h2}> {character.species}</h2>
-					<h2 className={style.h2}> {character.gender}</h2>
-					<h2 className={style.h2}> {character.origin.name}</h2>
+			<div className={style.container}>
+				<div className={style.containerItem + ' ' + style.animate}>
+					<div className={style.dataCard}>
+						<h2 className={style.h2}> {character.name}</h2>
+						<h2 className={style.h2}> {character.status}</h2>
+						<h2 className={style.h2}> {character.species}</h2>
+						<h2 className={style.h2}> {character.gender}</h2>
+						<h2 className={style.h2}> {character.origin.name}</h2>
+					</div>
+					<Imagen url={character.image} alt={character.name} />
 				</div>
-				<Imagen url={character.image} alt={character.name} />
 			</div>
 		);
 	};
