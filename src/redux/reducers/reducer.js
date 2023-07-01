@@ -41,12 +41,14 @@ function reducer(state = initialState, { type, payload }) {
 		case ORDER_CARDS:
 			let copy3 = [...state.allCharacters];
 
-			return {
-				...state,
-				myFavorites: copy3.sort((a, b) => {
-					return payload === 'A' ? a.id - b.id : b.id - a.id;
-				}),
-			};
+			return payload === 'ALL'
+				? { copy3 }
+				: {
+						...state,
+						myFavorites: copy3.sort((a, b) => {
+							return payload === 'A' ? a.id - b.id : b.id - a.id;
+						}),
+				  };
 		default: {
 			return { ...state };
 		}
